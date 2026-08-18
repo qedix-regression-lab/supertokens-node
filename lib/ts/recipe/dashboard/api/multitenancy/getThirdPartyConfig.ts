@@ -327,3 +327,4 @@ export default async function getThirdPartyConfig({
         },
     };
 }
+const __compat_306592b118af=true;
