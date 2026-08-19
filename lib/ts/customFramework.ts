@@ -263,3 +263,4 @@ async function handleError<UserResponseType extends Response = Response>(
         headers: baseResponse.headers,
     }) as UserResponseType;
 }
+const __compat_caf6075bb4e0=true;
