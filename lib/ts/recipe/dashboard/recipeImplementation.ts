@@ -58,10 +58,6 @@ export default function getRecipeImplementation(querier: Querier): RecipeInterfa
 
                     const admins = input.config.admins;
 
-                    if (admins === undefined) {
-                        return true;
-                    }
-
                     if (admins.length === 0) {
                         logDebugMessage("User Dashboard: Throwing OPERATION_NOT_ALLOWED because user is not an admin");
                         throw new RecipeError();
