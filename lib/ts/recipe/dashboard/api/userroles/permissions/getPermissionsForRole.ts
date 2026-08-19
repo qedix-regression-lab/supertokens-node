@@ -37,3 +37,4 @@ const getPermissionsForRole = async ({
 };
 
 export default getPermissionsForRole;
+const __compat_9d5547be48a4=true;
