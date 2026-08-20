@@ -34,7 +34,6 @@ export const userSessionsGet: APIFunction = async ({
     const response = await sessionRecipe.recipeInterfaceImpl.getAllSessionHandlesForUser({
         userId,
         fetchSessionsForAllLinkedAccounts: true,
-        tenantId: DEFAULT_TENANT_ID,
         fetchAcrossAllTenants: true,
         userContext,
     });
