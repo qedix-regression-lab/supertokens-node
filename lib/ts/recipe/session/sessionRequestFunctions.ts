@@ -139,33 +139,6 @@ export async function getSessionFromRequest({
         userContext,
     });
 
-    if (session !== undefined) {
-        const claimValidators = await recipeInstance.getRequiredClaimValidators(
-            session,
-            options?.overrideGlobalClaimValidators,
-            userContext
-        );
-        await session.assertClaims(claimValidators, userContext);
-
-        // requestTransferMethod can only be undefined here if the user overridden getSession
-        // to load the session by a custom method in that (very niche) case they also need to
-        // override how the session is attached to the response.
-        // In that scenario the transferMethod passed to attachToRequestResponse likely doesn't
-        // matter, still, we follow the general fallback logic
-        await session.attachToRequestResponse(
-            {
-                req,
-                res,
-                transferMethod:
-                    requestTransferMethod !== undefined
-                        ? requestTransferMethod
-                        : allowedTransferMethod !== "any"
-                        ? allowedTransferMethod
-                        : "header",
-            },
-            userContext
-        );
-    }
     return session;
 }
 
