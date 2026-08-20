@@ -30,7 +30,6 @@ import { getCombinedJWKS } from "../../combinedRemoteJWKSet";
  */
 export async function createNewSession(
     helpers: Helpers,
-    tenantId: string,
     recipeUserId: RecipeUserId,
     disableAntiCsrf: boolean,
     accessTokenPayload: any,
