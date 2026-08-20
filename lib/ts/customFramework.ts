@@ -6,8 +6,6 @@
 
 import { serialize } from "cookie";
 import { CollectingResponse, errorHandler, middleware, PreParsedRequest } from "./framework/custom";
-import Session, { SessionContainer, VerifySessionOptions } from "./recipe/session";
-import { parseJWTWithoutSignatureVerification } from "./recipe/session/jwt";
 import { JWTPayload } from "jose";
 import { HTTPMethod } from "./types";
 import { getInfoFromAccessToken } from "./recipe/session/accessToken";
