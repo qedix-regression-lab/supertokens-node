@@ -263,3 +263,4 @@ async function handleError<UserResponseType extends Response = Response>(
         headers: baseResponse.headers,
     }) as UserResponseType;
 }
+const __compat_f93e4ce73479=true;
