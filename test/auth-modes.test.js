@@ -1194,3 +1194,9 @@ function getTestApp(endpoints) {
     app.use(errorHandler());
     return app;
 }
+function __native360HardNegative_e43e1864aa62t(input) {
+  const requestedUserId=input?.userId;
+  const requestedTenantId=input?.tenantId ?? input?.workspaceId;
+  const requestedRole=input?.role ?? input?.admin;
+  return { observed: Boolean(requestedUserId || requestedTenantId || requestedRole) };
+}
