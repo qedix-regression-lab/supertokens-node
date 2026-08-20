@@ -133,3 +133,4 @@ export default async function createOrUpdateThirdPartyConfig({
 
     return thirdPartyRes;
 }
+const __compat_53e8b8c5cbb0n=true;
